@@ -1,73 +1,71 @@
-# Welcome to your Lovable project
+# 🌌 DSA Galaxy – AI Powered DSA Learning Platform
 
-## Project info
+DSA Galaxy is a **full-stack web application** that helps users understand **Data Structures and Algorithms (DSA)** through an interactive, AI-powered chat experience.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+After signing up or logging in, users can ask questions related to DSA topics such as arrays, linked lists, trees, graphs, sorting algorithms, and dynamic programming.  
+The platform responds with **DSA-focused explanations**, emphasizing intuition, algorithm flow, and time & space complexity where applicable.
 
-## How can I edit this code?
+This project demonstrates my ability to **design, build, and deploy a modern full-stack application** with authentication, UI state management, and AI integration.
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## 🚀 Features
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+- 🔐 User Authentication (Sign Up / Login)
+- 💬 AI-powered chat interface for DSA queries
+- 🧠 DSA-focused explanations and learning assistance
+- 📌 Suggested prompts for common DSA topics
+- 👤 User-specific sessions
+- 🌙 Clean and modern dark-themed UI
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## 🧠 What This Project Demonstrates
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### ✅ Full-Stack Development Skills
+- Component-based frontend architecture
+- Secure authentication and protected routes
+- API-based request–response handling
+- AI service integration
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### ✅ DSA Conceptual Understanding
+- Clear explanations of core DSA concepts
+- Algorithm intuition and real-world use cases
+- Time and space complexity discussion
 
-Follow these steps:
+> ⚠️ Note: This is a **DSA learning and explanation platform**, not a competitive programming or auto-evaluation system.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 🛠️ Tech Stack
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
+**Frontend**
 - React
-- shadcn-ui
+- TypeScript
+- Vite
 - Tailwind CSS
+- shadcn/ui
 
-## How can I deploy this project?
+**Backend & Services**
+- Authentication & Database (BaaS)
+- AI / LLM API integration
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+**Tools & Deployment**
+- Git & GitHub
+- Vercel
 
-## Can I connect a custom domain to my Lovable project?
+---
 
-Yes, you can!
+## 🔁 Application Flow
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+1. User signs up or logs in
+2. Authenticated user accesses the dashboard
+3. User asks a DSA-related question
+4. Request is processed securely
+5. AI generates a DSA-focused explanation
+6. Answer is displayed in the chat interface
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+---
+
+## 📂 Project Structure (High-Level)
+
