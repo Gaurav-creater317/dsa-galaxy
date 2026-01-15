@@ -50,7 +50,7 @@ This project demonstrates my ability to **design, build, and deploy a modern ful
 - Authentication & Database (BaaS)
 - AI / LLM API integration
 
-  **Database**
+**Database**
 - PostgreSQL (BaaS / managed cloud database)
 
 **Tools & Deployment**
