@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/hooks/useAuth';
@@ -9,6 +9,8 @@ import { DashboardView } from '@/components/DashboardView';
 import { HistoryView } from '@/components/HistoryView';
 import { AdminPanel } from '@/components/AdminPanel';
 import { toast } from 'sonner';
+
+type PageType = 'chat' | 'history' | 'dashboard' | 'admin';
 
 interface ChatSession {
   id: string;
@@ -24,10 +26,10 @@ interface Message {
 }
 
 export default function Index() {
-  const { user, loading: authLoading, session } = useAuth();
+  const { user, loading: authLoading, session, isAdmin } = useAuth();
   const navigate = useNavigate();
   
-  const [currentPage, setCurrentPage] = useState<'chat' | 'history' | 'dashboard' | 'admin'>('chat');
+  const [currentPage, setCurrentPage] = useState<PageType>('chat');
   const [sessions, setSessions] = useState<ChatSession[]>([]);
   const [activeSessionId, setActiveSessionId] = useState<string | null>(null);
   const [messages, setMessages] = useState<Message[]>([]);
@@ -38,6 +40,23 @@ export default function Index() {
       navigate('/auth');
     }
   }, [user, authLoading, navigate]);
+
+  // Server-side validated navigation - prevent non-admins from accessing admin page
+  const handleNavigate = useCallback((page: PageType) => {
+    if (page === 'admin' && !isAdmin) {
+      toast.error('Unauthorized: Admin access required');
+      return;
+    }
+    setCurrentPage(page);
+  }, [isAdmin]);
+
+  // Also guard against direct manipulation of currentPage state
+  useEffect(() => {
+    if (currentPage === 'admin' && !isAdmin && !authLoading) {
+      setCurrentPage('chat');
+      toast.error('Unauthorized: Admin access required');
+    }
+  }, [currentPage, isAdmin, authLoading]);
 
   useEffect(() => {
     if (user) fetchSessions();
@@ -169,7 +188,7 @@ export default function Index() {
         onNewChat={handleNewChat}
         onSelectSession={handleSelectSession}
         onDeleteSession={handleDeleteSession}
-        onNavigate={setCurrentPage}
+        onNavigate={handleNavigate}
         currentPage={currentPage}
       />
 
