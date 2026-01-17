@@ -1,4 +1,4 @@
-#🌌 DSA Galaxy – AI Powered DSA Learning Platform
+# 🌌 DSA Galaxy – AI Powered DSA Learning Platform
 
 DSA Galaxy is a **full-stack web application** that helps users understand **Data Structures and Algorithms (DSA)** through an interactive, AI-powered chat experience.
 
