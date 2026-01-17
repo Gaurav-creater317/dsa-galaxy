@@ -1,5 +1,6 @@
 import { cn } from '@/lib/utils';
 import { Bot, User } from 'lucide-react';
+import DOMPurify from 'dompurify';
 
 interface ChatMessageProps {
   content: string;
@@ -58,8 +59,8 @@ export function ChatMessage({ content, role, timestamp }: ChatMessageProps) {
 }
 
 function formatMessage(content: string): string {
-  // Simple markdown-like formatting
-  return content
+  // Simple markdown-like formatting with XSS protection
+  const formatted = content
     // Code blocks
     .replace(/```(\w+)?\n([\s\S]*?)```/g, '<pre class="bg-galaxy-deep rounded-lg p-3 my-2 overflow-x-auto font-mono text-xs"><code>$2</code></pre>')
     // Inline code
@@ -68,4 +69,10 @@ function formatMessage(content: string): string {
     .replace(/\*\*([^*]+)\*\*/g, '<strong class="text-foreground font-semibold">$1</strong>')
     // Line breaks
     .replace(/\n/g, '<br />');
+  
+  // Sanitize the formatted content to prevent XSS attacks
+  return DOMPurify.sanitize(formatted, {
+    ALLOWED_TAGS: ['pre', 'code', 'strong', 'br'],
+    ALLOWED_ATTR: ['class'],
+  });
 }
