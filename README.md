@@ -86,7 +86,7 @@ cd DSA-Galaxy-AI-Powered-DSA-Learning-Platform
 npm install
 
 # Start the development server
-npm run dev
+npm run dev```
 
 ---
 
