@@ -88,3 +88,16 @@ npm install
 # Start the development server
 npm run dev
 
+---
+
+## 👨‍💻 Author
+
+**Gaurav Mehra**  
+Full Stack Developer  
+
+This project was **designed, developed, and deployed independently** by me as a personal learning and portfolio project.
+
+> Note: Some automated tools and AI-assisted workflows were used during development.  
+> All core architecture, logic, UI design, and integration decisions were made by me.
+
+
