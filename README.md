@@ -77,10 +77,10 @@ This project demonstrates my ability to **design, build, and deploy a modern ful
 
 ```bash
 # Clone the repository
-git clone https://github.com/Gaurav-creater317/DSA-Galaxy-AI-Powered-DSA-Learning-Platform.git
+git clone https://github.com/Gaurav-creater317/dsa-galaxy.git
 
 # Navigate to the project directory
-cd DSA-Galaxy-AI-Powered-DSA-Learning-Platform
+cd dsa-galaxy
 
 # Install dependencies
 npm install
