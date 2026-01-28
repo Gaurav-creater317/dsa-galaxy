@@ -28,7 +28,7 @@ export default function Auth() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (user) navigate('/chat');
+    if (user) navigate('/');
   }, [user, navigate]);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -58,7 +58,7 @@ export default function Auth() {
           toast.error(error.message || 'Failed to sign in');
         } else {
           toast.success('Welcome back!');
-          navigate('/chat');
+          navigate('/');
         }
       } else {
         const { error } = await signUp(email, password, fullName);
@@ -66,7 +66,7 @@ export default function Auth() {
           toast.error(error.message || 'Failed to create account');
         } else {
           toast.success('Account created successfully!');
-          navigate('/chat');
+          navigate('/');
         }
       }
     } finally {
