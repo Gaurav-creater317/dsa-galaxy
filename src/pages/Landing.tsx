@@ -339,13 +339,13 @@ export default function Landing() {
             <div>
               <h4 className="font-semibold mb-4">Connect</h4>
               <div className="flex gap-4">
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="https://github.com/Gaurav-creater317" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                   <Github className="w-5 h-5" />
                 </a>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="https://x.com/Gaurav27Spark" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                   <Twitter className="w-5 h-5" />
                 </a>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="https://www.linkedin.com/in/gaurav-mehra-a41220299" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                   <Linkedin className="w-5 h-5" />
                 </a>
               </div>
