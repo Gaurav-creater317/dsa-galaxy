@@ -98,7 +98,7 @@ export default function Landing() {
               Login
             </Button>
           </Link>
-          <Link to="/auth">
+          <Link to="/auth?mode=signup">
             <Button className="cosmic-glow">
               Sign Up
               <ChevronRight className="w-4 h-4 ml-1" />
@@ -127,7 +127,7 @@ export default function Landing() {
             <Link to="/auth" onClick={() => setMobileMenuOpen(false)}>
               <Button variant="outline" className="w-full">Login</Button>
             </Link>
-            <Link to="/auth" onClick={() => setMobileMenuOpen(false)}>
+            <Link to="/auth?mode=signup" onClick={() => setMobileMenuOpen(false)}>
               <Button className="w-full cosmic-glow">Sign Up</Button>
             </Link>
           </div>
